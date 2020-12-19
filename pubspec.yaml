@@ -6,6 +6,8 @@ homepage: https://github.com/DPLYR-dev/SplashScreenFlutterPackage
 dependencies:
   flutter:
     sdk: flutter
+  flutter_spinkit: ^4.1.2+1
+
 
 dev_dependencies:
   flutter_test:
