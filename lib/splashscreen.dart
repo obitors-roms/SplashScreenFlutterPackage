@@ -252,7 +252,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     children: <Widget>[
                       !widget.useLoader
                           ? Container()
-                          : SpinKitFadingCircle(
+                          : SpinKitDoubleBounce(
                             color: primaryColor,
                             size: 50.0,
                           ),
