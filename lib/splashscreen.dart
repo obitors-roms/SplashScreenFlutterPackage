@@ -4,9 +4,14 @@ import 'dart:async';
 import 'dart:core';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class SplashScreen extends StatefulWidget {
+  
+  static const Color primaryColor = Color(0xFF77a4ec);
+  
   /// Seconds to navigate after for time based navigation
+  
   final int seconds;
 
   /// App title, shown in the middle of screen in case of no image available
@@ -149,6 +154,10 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+
+
+  static const Color primaryColor = Color(0xFF77a4ec);
+
   @override
   void initState() {
     super.initState();
@@ -243,9 +252,13 @@ class _SplashScreenState extends State<SplashScreen> {
                     children: <Widget>[
                       !widget.useLoader
                           ? Container()
-                          : CircularProgressIndicator(
-                              valueColor: new AlwaysStoppedAnimation<Color>(widget.loaderColor),
-                            ),
+                          : SpinKitFadingCircle(
+                            color: primaryColor,
+                            size: 50.0,
+                          ),
+                          // CircularProgressIndicator(
+                          //     valueColor: new AlwaysStoppedAnimation<Color>(widget.loaderColor),
+                          //   ),
                       Padding(
                         padding: const EdgeInsets.only(top: 20.0),
                       ),
